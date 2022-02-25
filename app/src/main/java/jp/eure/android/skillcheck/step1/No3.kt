@@ -17,8 +17,8 @@ object No3 {
     // 時間足らずでできなかったが、ハッシュテーブルを用いれば計算量をNにできたと思う。
     fun run(inputs1: List<Int>, inputs2: List<Int>): List<Int> {
         val answer = mutableListOf<Int>()
-        for((index1, value1) in inputs1.withIndex()){
-            for((index2, value2) in inputs2.withIndex()){
+        for(value1 in inputs1){
+            for(value2 in inputs2){
                 if (value1 == value2) {
                     answer.add(value1)
                 }

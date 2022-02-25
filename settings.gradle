@@ -3,6 +3,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // 追記
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 rootProject.name = "SkillCheck"

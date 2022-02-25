@@ -19,9 +19,23 @@ package jp.eure.android.skillcheck.step1
  * 出力例3: null
  */
 object No2 {
-
+    // ※未完成
+    // 適切なアルゴリズムが思いつきませんでした。
     fun run(root: Node, inputA: String, inputB: String): Node? {
+        val answerNodeListA = mutableListOf<Node>()
+        val answerNodeListB = mutableListOf<Node>()
+        var flagInputA = false
+        var flagInputB = false
+        var nextNode = root
 
+        while (flagInputA && flagInputB) {
+            if (nextNode.value == inputA) { flagInputA == true }
+            if (nextNode.value == inputB) { flagInputB == true }
+            if (!flagInputA) { answerNodeListA.add(nextNode) }
+            if (!flagInputB) { answerNodeListB.add(nextNode) }
+        }
+
+        return nextNode
     }
 
 }
