@@ -1,11 +1,27 @@
 # 新卒採用 Androidエンジニア 技術課題
 
+## 画面概要
+### リポジトリ検索画面
+<img src="screenshots/project_list.png" width=40%>
+リポジトリを検索する画面です。
+
+上部の検索バーにクエリを入れて、キーボードの検索ボタンを押すと検索を開始します。
+
+情報を取得するまでは「Loading...」と表示され、取得が完了するとリスト形式でリポジトリが表示されます。
+
+リストに表示されたリポジトリをタップすると、そのリポジトリの詳細画面へ遷移します。
+
+### リポジトリ詳細画面
+<img src="screenshots/project_detail.png" width=40%>
+
+リポジトリの詳細画面です。
+
 ## 課題に対する感想や考察
 ### Step1
 #### No1
-要件通りに実装できたとと思います。
+要件通りに実装できたと思います。
 #### No2
-木構造をどう探索するかの方法が思いつきませんでした。アルゴリズムの基礎がわからないことが発覚したので、良い書籍を見つけたので勉強しようと思います。
+木構造をどう探索するかの方法が思いつきませんでした。アルゴリズムの基礎がわからないことが発覚したため、良い書籍を見つけたので勉強しようと思います。
 #### No3
 二重ループを用いて実装したのですが、リストの要素が多くなった時に計算量が莫大になってしまうのがよくなかったと思います。
 時間足らずでできませんでしたが、ハッシュテーブルのようなものを使って実装すれば、計算量をNに抑えられると思いました。
@@ -20,9 +36,12 @@
 - リポジトリ情報を取得中の際に、ただ取得を待っているだけだとユーザーがフリーズしたと勘違いしてしまうため、非同期処理の活用と「Loading ...」と表示することで情報取得完了までの間のユーザーの不安を解消しました。
 #### できなかったこと
 - リポジトリの説明、ホームページ等、Licenseのような、apiレスポンスがnullになる可能性のある箇所についての表示を実装できませんでした。
- - nullであれば仮の値（ - のような文字列）を入れる等の処理を加えられれば良かったと思います。
-- Pull requestsとContributorsに関しては、リポジトリを検索するために使ったapi(https://docs.github.com/en/rest/reference/search#search-repositories)とは違うapiをそれぞれ叩かなくてはならず、時間足らずで実装できませんでした。
- - Pull requestsを取得するAPI（https://docs.github.com/en/rest/reference/search#search-issues-and-pull-requests）と、Contributorsを取得するAPI（https://docs.github.com/en/graphql/reference/objects#contributionscollection）それぞれを別に実装すればできると思いました。
+  - nullであれば仮の値（ - のような文字列）を入れる等の処理を加えられれば良かったと思います。
+- Pull requestsとContributorsに関しては、[リポジトリを検索するために使ったapi](https://docs.github.com/en/rest/reference/search#search-repositories)とは違うAPIをそれぞれ叩かなくてはならず、時間足らずで実装できませんでした。
+  - [Pull requestsを取得するAPI](https://docs.github.com/en/rest/reference/search#search-issues-and-pull-requests)と、[Contributorsを取得するAPI](https://docs.github.com/en/graphql/reference/objects#contributionscollection)のそれぞれを実装することが必要だと思いました。
+- デザイン整える時間が取れず、殺風景なデザインになってしまいました。
+- これはStep1でもいえますが、開発に夢中になりすぎて、細かくcommitするのを忘れていました。
+  - 問題単位、機能単位でcommitする癖を付けなければならないと思いました。
 
 ## 概要
 これはエウレカの新卒採用におけるAndroidエンジニアの技術課題です。  
