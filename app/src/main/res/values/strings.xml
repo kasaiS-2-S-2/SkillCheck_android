@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MVVM Github Client</string>
+    <string name="app_name">GitHubリポジトリ検索アプリ</string>
     <string name="loading_projects">Loading projects …</string>
     <string name="github_projects">Your GitHub Projects!!</string>
     <string name="project_list">Project List</string>
