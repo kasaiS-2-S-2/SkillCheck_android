@@ -1,6 +1,6 @@
 # 新卒採用 Androidエンジニア 技術課題
 
-## 画面概要
+## Step2画面概要
 ### リポジトリ検索画面
 <img src="screenshots/project_list.png" width=40%>
 リポジトリを検索する画面です。
